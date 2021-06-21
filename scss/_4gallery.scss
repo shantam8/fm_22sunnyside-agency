@@ -1,0 +1,26 @@
+section#gallery{
+
+    margin-top: 3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "milk orange" "cone sugar";
+
+    img{
+        width: 100%;
+    }
+
+    #imageMilk{
+        grid-area: milk;
+    }
+    #imageOrange{
+        grid-area: orange;
+    }
+    #imageCone{
+        grid-area: cone;
+    }
+    #imageSugar{
+        grid-area: sugar;
+    }
+}

@@ -1,0 +1,39 @@
+section#testimonials {
+  h4 {
+    margin-top: 3rem;
+    text-transform: uppercase;
+    color: $grayishBlue;
+    font-family: "Fraunces", serif;
+    letter-spacing: 4px;
+    font-weight: 700;
+  }
+
+  .card {
+    margin-top: 3rem;
+    padding: 1rem;
+
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 35px;
+    }
+
+    img ~ p {
+      color: $veryDarkGrayishBlue;
+      font-size: 1.2rem;
+      line-height: 29px;
+      margin-top: 1rem;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+
+    h2 ~ p {
+      color: $grayishBlue;
+      font-size: 0.9rem;
+      margin-top: 0.2rem;
+    }
+  }
+}

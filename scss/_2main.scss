@@ -1,0 +1,88 @@
+section#main {
+  article {
+    content: "";
+    margin-top: 3rem;
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      padding: 0 2rem;
+      padding-bottom: 0rem;
+    }
+
+    p {
+      padding: 2rem;
+      line-height: 1.5rem;
+      color: $darkGrayishBlue;
+    }
+
+    a {
+      position: relative;
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: 900;
+      text-decoration: none;
+      color: black;
+
+      &::after {
+        position: absolute;
+        content: "";
+        background-color: lighten($yellow, 35%);
+        left: -10px;
+        right: -10px;
+        top: 12px;
+        bottom: -3px;
+        border-radius: 15px;
+        z-index: -1;
+      }
+    }
+  }
+
+  .egg,
+  .mandarine {
+    margin-top: 0;
+  }
+
+  .standOut {
+    a::after {
+      background-color: lighten($softRed, 20%);
+    }
+  }
+
+  .cherry,
+  .mandarine {
+    padding: 25em 1rem 0 1rem;
+    background-size: cover;
+    height: 37rem;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    p{
+      padding: unset;
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+    }
+  }
+
+  .cherry {
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+    color: $darkDesaturatedCyan;
+    p {
+      color: $darkDesaturatedCyan;
+    }
+  }
+
+  .mandarine {
+    background-image: url("../images/mobile/image-photography.jpg");
+    color: $darkBlue;
+    p {
+      color: $darkBlue;
+    }
+  }
+}

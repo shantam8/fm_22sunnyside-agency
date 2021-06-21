@@ -1,6 +1,12 @@
 @import "fonts";
 @import "variables";
 
+@import "1header";
+@import "2main";
+@import "3testimonials";
+@import "4gallery";
+@import "5footer";
+
 
 
 //     font-family: 'Barlow', sans-serif; 6
@@ -11,4 +17,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+h1, h2, h3,  p~a{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    
 }

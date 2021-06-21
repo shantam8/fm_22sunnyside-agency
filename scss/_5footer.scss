@@ -1,0 +1,46 @@
+footer {
+  background-color: lighten($darkModerateCyan, 25%);
+  padding: 4rem 1rem 5rem 1rem;
+
+  .svgLogo {
+
+    svg path {
+      fill: $darkDesaturatedCyan;
+    }
+  }
+
+  nav {
+    margin: 0 auto;
+    width: 250px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: $darkDesaturatedCyan;
+    }
+  }
+
+  .socialMedia {
+      width: 200px;
+      margin: 0 auto;
+      margin-top: 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+    .svg {
+      width: 100%;
+
+      svg {
+        width: 50%;
+
+        path {
+          fill: $darkDesaturatedCyan;
+        }
+      }
+    }
+  }
+}

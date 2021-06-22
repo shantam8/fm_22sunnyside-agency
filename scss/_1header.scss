@@ -4,13 +4,24 @@ header {
   background-size: cover;
   padding: 2rem 2rem 0 2rem;
 
+  @media screen and (min-width:40rem) {
+    background-image: url("../images/desktop/image-header.jpg");
+  }
+
   .flexWrapper {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    #toggleMobileMenu {
+      @media screen and (min-width: 40rem) {
+        display: none;
+      }
+    }
+
     nav {
+      opacity: 0;
       position: absolute;
       content: "";
       top: 5rem;
@@ -18,8 +29,14 @@ header {
       right: 0;
       background-color: $white;
       padding: 1rem;
-      opacity: 0;
-      transition: all 0.5s ease-in;
+      //transition: opacity 0.5s ease-in;
+
+      @media screen and (min-width: 40rem) {
+        position: relative;
+        opacity: 1;
+        background-color: transparent;
+        top: 0;
+      }
 
       &::after {
         position: absolute;
@@ -29,6 +46,17 @@ header {
         border-top: 30px solid transparent;
         border-bottom: 30px solid transparent;
         border-right: 30px solid $white;
+
+        @media screen and (min-width: 40rem) {
+          content: unset;
+        }
+      }
+
+      @media screen and (min-width: 40rem) {
+      }
+
+      &.opacityOne {
+        opacity: 1;
       }
 
       a {
@@ -40,6 +68,12 @@ header {
         margin: 0.5rem auto;
         font-size: 1.2rem;
         width: 130px;
+
+        @media screen and (min-width: 40rem) {
+          display: inline;
+          color: $white;
+          padding: 0.5rem;
+        }
       }
 
       .contact {
@@ -50,6 +84,10 @@ header {
         color: black;
         text-transform: uppercase;
         font-size: 1rem;
+
+        @media screen and (min-width: 40rem) {
+          background-color: $white;
+        }
       }
     }
 

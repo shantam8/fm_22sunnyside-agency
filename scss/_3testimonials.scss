@@ -8,32 +8,45 @@ section#testimonials {
     font-weight: 700;
   }
 
-  .card {
-    margin-top: 3rem;
-    padding: 1rem;
-
-    img {
-      width: 70px;
-      height: 70px;
-      border-radius: 35px;
+  .flexWrapper {
+    @media screen and (min-width: 50rem) {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;;
     }
 
-    img ~ p {
-      color: $veryDarkGrayishBlue;
-      font-size: 1.2rem;
-      line-height: 29px;
-      margin-top: 1rem;
-    }
+    .card {
+      margin-top: 3rem;
+      padding: 1rem;
 
-    h2 {
-      font-size: 1.1rem;
-      margin-top: 1rem;
-    }
+      @media screen and (min-width: 50rem) {
+        width: 300px;
+      }
 
-    h2 ~ p {
-      color: $grayishBlue;
-      font-size: 0.9rem;
-      margin-top: 0.2rem;
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+      }
+
+      img ~ p {
+        color: $veryDarkGrayishBlue;
+        font-size: 1.2rem;
+        line-height: 29px;
+        margin-top: 1rem;
+      }
+
+      h2 {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+      }
+
+      h2 ~ p {
+        color: $grayishBlue;
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
+      }
     }
   }
 }

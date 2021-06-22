@@ -3,8 +3,10 @@ header {
   height: 500px;
   background-size: cover;
   padding: 2rem 2rem 0 2rem;
+  background-position: center;
+  text-align: center;
 
-  @media screen and (min-width:40rem) {
+  @media screen and (min-width: 24rem) {
     background-image: url("../images/desktop/image-header.jpg");
   }
 
@@ -52,9 +54,6 @@ header {
         }
       }
 
-      @media screen and (min-width: 40rem) {
-      }
-
       &.opacityOne {
         opacity: 1;
       }
@@ -73,6 +72,10 @@ header {
           display: inline;
           color: $white;
           padding: 0.5rem;
+        }
+
+        @media screen and (min-width: 64rem) {
+          margin: 0.5rem 1rem;
         }
       }
 

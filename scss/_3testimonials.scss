@@ -1,28 +1,18 @@
 section#testimonials {
+  text-align: center;
   h4 {
     margin-top: 3rem;
     text-transform: uppercase;
     color: $grayishBlue;
     font-family: "Fraunces", serif;
     letter-spacing: 4px;
-    font-weight: 700;
+    font-weight: 900;
   }
 
   .flexWrapper {
-    @media screen and (min-width: 50rem) {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      flex-wrap: wrap;;
-    }
-
     .card {
-      margin-top: 3rem;
+      margin-top: 4rem;
       padding: 1rem;
-
-      @media screen and (min-width: 50rem) {
-        width: 300px;
-      }
 
       img {
         width: 70px;
@@ -34,12 +24,12 @@ section#testimonials {
         color: $veryDarkGrayishBlue;
         font-size: 1.2rem;
         line-height: 29px;
-        margin-top: 1rem;
+        margin-top: 2rem;
       }
 
       h2 {
         font-size: 1.1rem;
-        margin-top: 1rem;
+        margin-top: 2rem;
       }
 
       h2 ~ p {
@@ -48,5 +38,16 @@ section#testimonials {
         margin-top: 0.2rem;
       }
     }
+  }
+
+  @media screen and (min-width: 40rem) {
+    margin-top: 5rem;
+    .flexWrapper .card {
+      padding: 1rem 25%;
+    }
+  }
+
+  @media screen and (min-width: 64rem) {
+    // todo flex
   }
 }

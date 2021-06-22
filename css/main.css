@@ -5,9 +5,11 @@ header {
   height: 500px;
   background-size: cover;
   padding: 2rem 2rem 0 2rem;
+  background-position: center;
+  text-align: center;
 }
 
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 24rem) {
   header {
     background-image: url("../images/desktop/image-header.jpg");
   }
@@ -91,6 +93,12 @@ header .flexWrapper nav a {
   }
 }
 
+@media screen and (min-width: 64rem) {
+  header .flexWrapper nav a {
+    margin: 0.5rem 1rem;
+  }
+}
+
 header .flexWrapper nav .contact {
   font-family: "Fraunces", serif;
   font-weight: 700;
@@ -120,232 +128,284 @@ header h1 {
   letter-spacing: 6px;
 }
 
-@media screen and (min-width: 40rem) {
-  section#main .egg {
-    grid-area: egg;
-  }
-  section#main .egg img {
-    src: url("../images/desktop/image-transform.jpg");
-  }
-  section#main .transform {
-    grid-area: transform;
-  }
-  section#main .glass {
-    grid-area: glass;
-  }
-  section#main .glass img {
-    src: url("../images/desktop/image-stand-out.jpg");
-  }
-  section#main .standOut {
-    grid-area: stand;
-  }
-  section#main .cherry {
-    grid-area: design;
-  }
-  section#main .manadrine {
-    grid-area: photo;
-  }
+section#main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100vw;
+      grid-template-columns: 100vw;
+  -ms-grid-rows: (auto)[6];
+      grid-template-rows: repeat(6, auto);
+      grid-template-areas: "egg" "transform" "glass" "stand" "graphic" "photo";
 }
 
-@media screen and (min-width: 50rem) {
-  section#main {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: (1fr)[3];
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: "transform egg" "glass stand" "design photo";
-    justify-items: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-@media screen and (min-width: 50rem) {
-  section#main .textWrapper {
-    text-align: left;
-  }
-}
-
-section#main article {
-  content: "";
-  margin-top: 3rem;
-}
-
-@media screen and (min-width: 50rem) {
-  section#main article {
-    width: 100%;
-    height: 100%;
-    margin-top: 0;
-  }
-}
-
-section#main article img {
-  width: 100%;
+section#main .egg {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: egg;
   height: 100%;
 }
 
-section#main article h2 {
-  font-size: 2rem;
-  font-weight: 900;
-  padding: 0 2rem;
-  padding-bottom: 0rem;
+section#main .egg img {
+  height: 100%;
+  width: 100%;
 }
 
-section#main article p {
-  padding: 2rem;
-  line-height: 1.5rem;
+section#main .transform {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: transform;
+}
+
+section#main .transform .textWrapper {
+  padding: 1rem 1rem 3rem 1rem;
+  text-align: center;
+}
+
+section#main .transform .textWrapper h2 {
+  padding: 2rem 2rem 0 2rem;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #23303e;
+}
+
+section#main .transform .textWrapper p {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 25px;
   color: #818498;
 }
 
-section#main article a {
+section#main .transform .textWrapper a {
   position: relative;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 900;
   text-decoration: none;
+  text-transform: uppercase;
   color: black;
+  font-weight: 900;
 }
 
-section#main article a::after {
+section#main .transform .textWrapper a::after {
   position: absolute;
   content: "";
-  background-color: #fff3ad;
-  left: -10px;
-  right: -10px;
   top: 12px;
-  bottom: -3px;
-  border-radius: 15px;
+  left: -8px;
+  right: -8px;
+  bottom: -5px;
   z-index: -1;
+  border-radius: 8px;
 }
 
-section#main .egg,
-section#main .mandarine {
-  margin-top: 0;
+section#main .transform a::after {
+  background-color: #fff7c7;
+}
+
+section#main .glass {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: glass;
+  height: 100%;
+}
+
+section#main .glass img {
+  height: 100%;
+  width: 100%;
+}
+
+section#main .standOut {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: stand;
+}
+
+section#main .standOut .textWrapper {
+  padding: 1rem 1rem 3rem 1rem;
+  text-align: center;
+}
+
+section#main .standOut .textWrapper h2 {
+  padding: 2rem 2rem 0 2rem;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #23303e;
+}
+
+section#main .standOut .textWrapper p {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 25px;
+  color: #818498;
+}
+
+section#main .standOut .textWrapper a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 900;
+}
+
+section#main .standOut .textWrapper a::after {
+  position: absolute;
+  content: "";
+  top: 12px;
+  left: -8px;
+  right: -8px;
+  bottom: -5px;
+  z-index: -1;
+  border-radius: 8px;
 }
 
 section#main .standOut a::after {
   background-color: #ffd2cc;
 }
 
-@media screen and (min-width: 50rem) {
-  section#main .standOut {
-    padding: 0 5rem 0 2rem;
-  }
+section#main .graphic {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: graphic;
+  position: relative;
 }
 
-@media screen and (min-width: 50rem) {
-  section#main .transform {
-    padding: 0 2rem 0 5rem;
-  }
+section#main .graphic img {
+  height: 100%;
+  width: 100%;
 }
 
-@media screen and (min-width: 50rem) {
-  section#main .standOut,
-  section#main .transform {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  section#main .standOut .textWrapper,
-  section#main .transform .textWrapper {
-    padding: 0 2rem;
-  }
-  section#main .standOut .textWrapper p,
-  section#main .standOut .textWrapper h2,
-  section#main .transform .textWrapper p,
-  section#main .transform .textWrapper h2 {
-    text-align: left;
-  }
-  section#main .standOut .textWrapper a,
-  section#main .transform .textWrapper a {
-    margin-left: 2rem;
-  }
+section#main .graphic .textWrapperBottom {
+  position: absolute;
+  padding: 1rem;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
 }
 
-section#main .cherry,
-section#main .mandarine {
-  padding: 25rem 1rem 0 1rem;
-  background-size: cover;
-  height: 37rem;
-}
-
-@media screen and (min-width: 50rem) {
-  section#main .cherry,
-  section#main .mandarine {
-    background-size: 100% 100%;
-    height: 100%;
-    padding-top: 19rem;
-  }
-}
-
-section#main .cherry h3,
-section#main .mandarine h3 {
-  font-size: 2rem;
+section#main .graphic .textWrapperBottom h3 {
+  font-size: 1.8rem;
   font-weight: 900;
 }
 
-@media screen and (min-width: 50rem) {
-  section#main .cherry h3,
-  section#main .mandarine h3 {
-    font-size: 1.5rem;
-  }
+section#main .graphic .textWrapperBottom p {
+  margin-top: 1rem;
+  line-height: 25px;
+  font-size: 1rem;
 }
 
-section#main .cherry p,
-section#main .mandarine p {
-  padding: unset;
-  margin-top: 1.5rem;
-  font-size: 1.1rem;
-}
-
-@media screen and (min-width: 50rem) {
-  section#main .cherry p,
-  section#main .mandarine p {
-    font-size: 0.8rem;
-    padding: 0 25%;
-  }
-}
-
-section#main .cherry {
-  background-image: url("../images/mobile/image-graphic-design.jpg");
+section#main .graphic .textWrapperBottom {
   color: #25564b;
 }
 
-section#main .cherry p {
-  color: #25564b;
+section#main .photography {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: photo;
+  position: relative;
 }
 
-@media screen and (min-width: 40rem) {
-  section#main .cherry {
-    grid-area: design;
-    background-image: url("../images/desktop/image-graphic-design.jpg");
-  }
+section#main .photography img {
+  height: 100%;
+  width: 100%;
 }
 
-section#main .mandarine {
-  background-image: url("../images/mobile/image-photography.jpg");
+section#main .photography .textWrapperBottom {
+  position: absolute;
+  padding: 1rem;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+section#main .photography .textWrapperBottom h3 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+section#main .photography .textWrapperBottom p {
+  margin-top: 1rem;
+  line-height: 25px;
+  font-size: 1rem;
+}
+
+section#main .photography .textWrapperBottom {
   color: #19536b;
 }
 
-section#main .mandarine p {
-  color: #19536b;
+@media screen and (min-width: 30rem) {
+  section#main .photography .textWrapperBottom,
+  section#main .graphic .textWrapperBottom {
+    padding: 3rem 1rem;
+  }
 }
 
 @media screen and (min-width: 40rem) {
-  section#main .mandarine {
-    grid-area: photo;
-    background-image: url("../images/desktop/image-photography.jpg");
+  section#main {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "transform egg" "glass stand" "graphic photo";
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
+  section#main .transform .textWrapper,
+  section#main .standOut .textWrapper {
+    text-align: left;
+    padding: 2rem;
+  }
+  section#main .transform .textWrapper h2,
+  section#main .standOut .textWrapper h2 {
+    padding: unset;
+  }
+  section#main .photography .textWrapperBottom,
+  section#main .graphic .textWrapperBottom {
+    bottom: unset;
+    top: 5rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  section#main .photography .textWrapperBottom,
+  section#main .graphic .textWrapperBottom {
+    top: 11rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  section#main .transform .textWrapper {
+    padding: 0 3rem 0 6rem;
+  }
+  section#main .standOut .textWrapper {
+    padding: 0 6rem;
+  }
+  section#main .photography .textWrapperBottom,
+  section#main .graphic .textWrapperBottom {
+    top: 17rem;
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  section#main .transform .textWrapper {
+    padding: 0 4rem 0 8rem;
+  }
+  section#main .standOut .textWrapper {
+    padding: 0 8rem;
+  }
+  section#main .photography .textWrapperBottom,
+  section#main .graphic .textWrapperBottom {
+    top: 22rem;
+    padding: 0 9rem;
+  }
+}
+
+section#testimonials {
+  text-align: center;
 }
 
 section#testimonials h4 {
@@ -354,34 +414,12 @@ section#testimonials h4 {
   color: #a7abae;
   font-family: "Fraunces", serif;
   letter-spacing: 4px;
-  font-weight: 700;
-}
-
-@media screen and (min-width: 50rem) {
-  section#testimonials .flexWrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
+  font-weight: 900;
 }
 
 section#testimonials .flexWrapper .card {
-  margin-top: 3rem;
+  margin-top: 4rem;
   padding: 1rem;
-}
-
-@media screen and (min-width: 50rem) {
-  section#testimonials .flexWrapper .card {
-    width: 300px;
-  }
 }
 
 section#testimonials .flexWrapper .card img {
@@ -394,18 +432,27 @@ section#testimonials .flexWrapper .card img ~ p {
   color: #5a636c;
   font-size: 1.2rem;
   line-height: 29px;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 section#testimonials .flexWrapper .card h2 {
   font-size: 1.1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 section#testimonials .flexWrapper .card h2 ~ p {
   color: #a7abae;
   font-size: 0.9rem;
   margin-top: 0.2rem;
+}
+
+@media screen and (min-width: 40rem) {
+  section#testimonials {
+    margin-top: 5rem;
+  }
+  section#testimonials .flexWrapper .card {
+    padding: 1rem 25%;
+  }
 }
 
 section#gallery {
@@ -509,13 +556,15 @@ footer .socialMedia .svg svg path {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   font-weight: 600;
-  text-align: center;
 }
 
-h1, h2, h3, p ~ a {
-  font-family: 'Fraunces', serif;
+h1,
+h2,
+h3,
+p ~ a {
+  font-family: "Fraunces", serif;
   font-weight: 700;
 }
 

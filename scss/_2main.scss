@@ -1,194 +1,128 @@
 section#main {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas: "egg" "transform" "glass" "stand" "graphic" "photo";
+
+  .egg {
+    grid-area: egg;
+    height: 100%;
+    @include imageMaxSized;
+  }
+
+  .transform {
+    grid-area: transform;
+    @include transformAndStandBlock;
+
+    a::after {
+      background-color: lighten($yellow, 40%);
+    }
+  }
+
+  .glass {
+    grid-area: glass;
+    height: 100%;
+    @include imageMaxSized;
+  }
+
+  .standOut {
+    grid-area: stand;
+    @include transformAndStandBlock;
+
+    a::after {
+      background-color: lighten($softRed, 20%);
+    }
+  }
+
+  .graphic {
+    grid-area: graphic;
+    @include graphicAndPhotoBlock;
+
+    .textWrapperBottom {
+      color: $darkDesaturatedCyan;
+    }
+  }
+
+  .photography {
+    grid-area: photo;
+    @include graphicAndPhotoBlock;
+
+    .textWrapperBottom {
+      color: $darkBlue;
+    }
+  }
+
+  @media screen and (min-width: 30rem) {
+    .photography .textWrapperBottom,
+    .graphic .textWrapperBottom {
+      padding: 3rem 1rem;
+    }
+  }
+
   @media screen and (min-width: 40rem) {
-    .egg {
-      grid-area: egg;
-      img {
-        src: url("../images/desktop/image-transform.jpg");
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "transform egg"
+      "glass stand"
+      "graphic photo";
+
+    justify-items: center;
+    align-items: center;
+
+    .transform .textWrapper,
+    .standOut .textWrapper {
+      text-align: left;
+      padding: 2rem;
+
+      h2 {
+        padding: unset;
       }
     }
-    .transform {
-      grid-area: transform;
-    }
-    .glass {
-      grid-area: glass;
-      img {
-        src: url("../images/desktop/image-stand-out.jpg");
-      }
-    }
-    .standOut {
-      grid-area: stand;
-    }
-    .cherry {
-      grid-area: design;
-    }
-    .manadrine {
-      grid-area: photo;
+
+    .photography .textWrapperBottom,
+    .graphic .textWrapperBottom {
+      bottom: unset;
+      top: 5rem;
+      padding: 1rem;
     }
   }
 
   @media screen and (min-width: 50rem) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "transform egg" "glass stand" "design photo";
-    justify-items: center;
-    align-items: center;
-  }
-
-  .textWrapper {
-    @media screen and (min-width: 50rem) {
-      text-align: left;
+    .photography .textWrapperBottom,
+    .graphic .textWrapperBottom {
+      top: 11rem;
+      padding: 1rem;
     }
   }
 
-  article {
-    content: "";
-    margin-top: 3rem;
-
-    @media screen and (min-width: 50rem) {
-      width: 100%;
-      height: 100%;
-      margin-top: 0;
+  @media screen and (min-width: 64rem) {
+    .transform .textWrapper {
+      padding: 0 3rem 0 6rem;
+    }
+    .standOut .textWrapper {
+      padding: 0 6rem;
     }
 
-    img {
-      width: 100%;
-      height: 100%;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 900;
-      padding: 0 2rem;
-      padding-bottom: 0rem;
-    }
-
-    p {
-      padding: 2rem;
-      line-height: 1.5rem;
-      color: $darkGrayishBlue;
-    }
-
-    a {
-      position: relative;
-      text-transform: uppercase;
-      font-size: 1rem;
-      font-weight: 900;
-      text-decoration: none;
-      color: black;
-
-      &::after {
-        position: absolute;
-        content: "";
-        background-color: lighten($yellow, 35%);
-        left: -10px;
-        right: -10px;
-        top: 12px;
-        bottom: -3px;
-        border-radius: 15px;
-        z-index: -1;
-      }
+    .photography .textWrapperBottom,
+    .graphic .textWrapperBottom {
+      top: 17rem;
+      padding: 0 5rem;
     }
   }
 
-  .egg,
-  .mandarine {
-    margin-top: 0;
-  }
-
-  .standOut {
-    a::after {
-      background-color: lighten($softRed, 20%);
+  @media screen and (min-width: 80rem) {
+    .transform .textWrapper {
+      padding: 0 4rem 0 8rem;
+    }
+    .standOut .textWrapper {
+      padding: 0 8rem;
     }
 
-    @media screen and (min-width: 50rem) {
-      padding: 0 5rem 0 2rem;
-    }
-  }
-
-  .transform {
-    @media screen and (min-width: 50rem) {
-      padding: 0 2rem 0 5rem;
-    }
-  }
-
-  .standOut,
-  .transform {
-    @media screen and (min-width: 50rem) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      .textWrapper {
-        padding: 0 2rem;
-
-        p,
-        h2 {
-          text-align: left;
-        }
-
-        a {
-          margin-left: 2rem;
-        }
-      }
-    }
-  }
-
-  .cherry,
-  .mandarine {
-    padding: 25rem 1rem 0 1rem;
-    background-size: cover;
-    height: 37rem;
-
-    @media screen and (min-width: 50rem) {
-      background-size: 100% 100%;
-      height: 100%;
-      padding-top: 19rem;
-    }
-
-    h3 {
-      font-size: 2rem;
-      font-weight: 900;
-
-      @media screen and (min-width: 50rem) {
-        font-size: 1.5rem;
-      }
-    }
-
-    p {
-      padding: unset;
-      margin-top: 1.5rem;
-      font-size: 1.1rem;
-
-      @media screen and (min-width: 50rem) {
-        font-size: 0.8rem;
-        padding: 0 25%;
-      }
-    }
-  }
-
-  .cherry {
-    background-image: url("../images/mobile/image-graphic-design.jpg");
-    color: $darkDesaturatedCyan;
-    p {
-      color: $darkDesaturatedCyan;
-    }
-
-    @media screen and (min-width: 40rem) {
-      grid-area: design;
-      background-image: url("../images/desktop/image-graphic-design.jpg");
-    }
-  }
-
-  .mandarine {
-    background-image: url("../images/mobile/image-photography.jpg");
-    color: $darkBlue;
-    p {
-      color: $darkBlue;
-    }
-    @media screen and (min-width: 40rem) {
-      grid-area: photo;
-      background-image: url("../images/desktop/image-photography.jpg");
+    .photography .textWrapperBottom,
+    .graphic .textWrapperBottom {
+      top: 22rem;
+      padding: 0 9rem;
     }
   }
 }

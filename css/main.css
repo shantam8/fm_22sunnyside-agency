@@ -455,6 +455,32 @@ section#testimonials .flexWrapper .card h2 ~ p {
   }
 }
 
+@media screen and (min-width: 64rem) {
+  section#testimonials {
+    padding: 0 10%;
+  }
+  section#testimonials .flexWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  section#testimonials .flexWrapper .card {
+    padding: 1rem;
+  }
+  section#testimonials .flexWrapper .card img ~ p {
+    font-size: 1rem;
+  }
+  section#testimonials .flexWrapper .card h2 {
+    margin-top: 4rem;
+  }
+}
+
 section#gallery {
   margin-top: 3rem;
   width: 100%;
@@ -495,9 +521,21 @@ section#gallery #imageSugar {
   grid-area: sugar;
 }
 
+@media screen and (min-width: 40rem) {
+  section#gallery {
+    margin-top: 5rem;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "milk orange cone sugar";
+  }
+}
+
 footer {
   background-color: #8bc6ba;
   padding: 4rem 1rem 5rem 1rem;
+  text-align: center;
 }
 
 footer .svgLogo svg path {
@@ -531,20 +569,20 @@ footer .socialMedia {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 footer .socialMedia .svg {
-  width: 100%;
+  width: 20px;
 }
 
 footer .socialMedia .svg svg {
-  width: 50%;
+  width: 100%;
 }
 
 footer .socialMedia .svg svg path {

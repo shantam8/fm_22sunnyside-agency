@@ -48,6 +48,23 @@ section#testimonials {
   }
 
   @media screen and (min-width: 64rem) {
-    // todo flex
+    padding: 0 10%;
+    .flexWrapper {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+
+      .card {
+        padding: 1rem;
+
+        img ~ p {
+          font-size: 1rem;
+        }
+
+        h2 {
+          margin-top: 4rem;
+        }
+      }
+    }
   }
 }

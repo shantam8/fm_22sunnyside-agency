@@ -1,6 +1,7 @@
 footer {
   background-color: lighten($darkModerateCyan, 25%);
   padding: 4rem 1rem 5rem 1rem;
+  text-align: center;
 
   .svgLogo {
 
@@ -28,14 +29,14 @@ footer {
       margin: 0 auto;
       margin-top: 4rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
       
     .svg {
-      width: 100%;
+      width: 20px;
 
       svg {
-        width: 50%;
+        width: 100%;
 
         path {
           fill: $darkDesaturatedCyan;

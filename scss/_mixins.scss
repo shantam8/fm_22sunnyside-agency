@@ -35,10 +35,10 @@
 }
 
 @mixin transformAndStandBlock {
+  .textWrapper {
+    padding: 1rem 1rem 3rem 1rem;
+    text-align: center;
     
-    .textWrapper {
-      padding: 1rem 1rem 3rem 1rem;
-      text-align: center;
     h2 {
       padding: 2rem 2rem 0 2rem;
       font-weight: 900;
@@ -68,11 +68,9 @@
         left: -8px;
         right: -8px;
         bottom: -5px;
-
         z-index: -1;
         border-radius: 8px;
       }
     }
   }
 }
-

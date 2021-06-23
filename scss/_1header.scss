@@ -70,11 +70,11 @@ header {
         transition: all 0.3s ease-in;
         border-radius: 30px;
 
-        &:hover{
+        &:hover {
           background-color: lightskyblue;
         }
 
-        &:active{
+        &:active {
           transition: all 0s ease-in;
 
           color: $softRed;

@@ -26,7 +26,7 @@ footer {
         color: $white;
       }
 
-      &:active{
+      &:active {
         transition: all 0s ease-in;
         color: $softRed;
       }
@@ -40,10 +40,10 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
+
     .svg {
       width: 20px;
-      
+
       &:hover {
         cursor: pointer;
         svg path {
@@ -51,16 +51,16 @@ footer {
         }
       }
 
-      &:active{
-        svg path{
+      &:active {
+        svg path {
           transition: all 0s ease-in;
           fill: $softRed;
         }
       }
-      
+
       svg {
         width: 100%;
-        
+
         path {
           transition: all 0.3s ease-in;
           fill: $darkDesaturatedCyan;

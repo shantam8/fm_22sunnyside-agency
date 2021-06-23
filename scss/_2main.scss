@@ -15,7 +15,23 @@ section#main {
     @include transformAndStandBlock;
 
     a::after {
+      transition: 0.3s ease-in;
       background-color: lighten($yellow, 40%);
+    }
+
+    .textWrapper a:hover {
+      cursor: pointer;
+      &::after {
+        background-color: yellow;
+      }
+    }
+
+    .textWrapper a:active {
+      &::after {
+        transition: all 0s ease-in;
+
+        background-color: $darkModerateCyan;
+      }
     }
   }
 
@@ -30,7 +46,22 @@ section#main {
     @include transformAndStandBlock;
 
     a::after {
+      transition: 0.3s ease-in;
       background-color: lighten($softRed, 20%);
+    }
+
+    .textWrapper a:hover {
+      cursor: pointer;
+      &::after {
+        background-color: $softRed;
+      }
+    }
+
+    .textWrapper a:active {
+      &::after {
+        transition: all 0s ease-in;
+        background-color: $darkModerateCyan;
+      }
     }
   }
 

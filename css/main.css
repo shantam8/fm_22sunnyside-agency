@@ -83,13 +83,25 @@ header .flexWrapper nav a {
   margin: 0.5rem auto;
   font-size: 1.2rem;
   width: 130px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  border-radius: 30px;
+}
+
+header .flexWrapper nav a:hover {
+  background-color: lightskyblue;
+}
+
+header .flexWrapper nav a:active {
+  -webkit-transition: all 0s ease-in;
+  transition: all 0s ease-in;
+  color: #fe7867;
 }
 
 @media screen and (min-width: 40rem) {
   header .flexWrapper nav a {
     display: inline;
     color: white;
-    padding: 0.5rem;
   }
 }
 
@@ -196,7 +208,23 @@ section#main .transform .textWrapper a::after {
 }
 
 section#main .transform a::after {
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
   background-color: #fff7c7;
+}
+
+section#main .transform .textWrapper a:hover {
+  cursor: pointer;
+}
+
+section#main .transform .textWrapper a:hover::after {
+  background-color: yellow;
+}
+
+section#main .transform .textWrapper a:active::after {
+  -webkit-transition: all 0s ease-in;
+  transition: all 0s ease-in;
+  background-color: #458c7e;
 }
 
 section#main .glass {
@@ -257,7 +285,23 @@ section#main .standOut .textWrapper a::after {
 }
 
 section#main .standOut a::after {
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
   background-color: #ffd2cc;
+}
+
+section#main .standOut .textWrapper a:hover {
+  cursor: pointer;
+}
+
+section#main .standOut .textWrapper a:hover::after {
+  background-color: #fe7867;
+}
+
+section#main .standOut .textWrapper a:active::after {
+  -webkit-transition: all 0s ease-in;
+  transition: all 0s ease-in;
+  background-color: #458c7e;
 }
 
 section#main .graphic {
@@ -560,6 +604,18 @@ footer nav {
 footer nav a {
   text-decoration: none;
   color: #25564b;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+footer nav a:hover {
+  color: white;
+}
+
+footer nav a:active {
+  -webkit-transition: all 0s ease-in;
+  transition: all 0s ease-in;
+  color: #fe7867;
 }
 
 footer .socialMedia {
@@ -581,11 +637,27 @@ footer .socialMedia .svg {
   width: 20px;
 }
 
+footer .socialMedia .svg:hover {
+  cursor: pointer;
+}
+
+footer .socialMedia .svg:hover svg path {
+  fill: white;
+}
+
+footer .socialMedia .svg:active svg path {
+  -webkit-transition: all 0s ease-in;
+  transition: all 0s ease-in;
+  fill: #fe7867;
+}
+
 footer .socialMedia .svg svg {
   width: 100%;
 }
 
 footer .socialMedia .svg svg path {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   fill: #25564b;
 }
 

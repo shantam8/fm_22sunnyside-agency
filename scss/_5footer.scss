@@ -4,7 +4,6 @@ footer {
   text-align: center;
 
   .svgLogo {
-
     svg path {
       fill: $darkDesaturatedCyan;
     }
@@ -21,24 +20,49 @@ footer {
     a {
       text-decoration: none;
       color: $darkDesaturatedCyan;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        color: $white;
+      }
+
+      &:active{
+        transition: all 0s ease-in;
+        color: $softRed;
+      }
     }
   }
 
   .socialMedia {
-      width: 200px;
-      margin: 0 auto;
-      margin-top: 4rem;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
     .svg {
       width: 20px;
+      
+      &:hover {
+        cursor: pointer;
+        svg path {
+          fill: $white;
+        }
+      }
 
+      &:active{
+        svg path{
+          transition: all 0s ease-in;
+          fill: $softRed;
+        }
+      }
+      
       svg {
         width: 100%;
-
+        
         path {
+          transition: all 0.3s ease-in;
           fill: $darkDesaturatedCyan;
         }
       }
